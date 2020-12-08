@@ -1,0 +1,13 @@
+{% for category in categories %}
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-1">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'question:category_questions' category.id %}">{{ category.title }}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+{% endfor %}

@@ -1,0 +1,11 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<div class="d-flex flex-column">
+    <h1 class="text-right">{{ category.title }}</h1>
+
+    {% for question in questions %}
+        <a href="{% url 'question:question_detail' question.id %}" class="link">{{ question.title }}</a>
+    {% endfor %}
+</div>
+{% endblock  %}

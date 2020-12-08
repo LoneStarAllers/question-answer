@@ -1,0 +1,35 @@
+{% load static %}
+
+<!doctype html>
+<html dir="rtl" lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <style>
+      body{
+        direction: rtl;
+      }
+    </style>
+    <title>ask-questions</title>
+  </head>
+  <body>
+  {% include 'inc/navbar.html' %}
+  <div class="jumbotron">
+    {% include 'inc/list_group.html' %}
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
+  </div>
+
+  
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bbootstrap.bundle.min.js' %}"></script>
+
+  </body>
+</html>
